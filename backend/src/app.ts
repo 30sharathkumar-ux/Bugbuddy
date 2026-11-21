@@ -12,9 +12,21 @@ import { errorHandler } from './middleware/error-handler';
 const app = express();
 
 // CORS
+const allowedOrigins = [
+  process.env.FRONTEND_URL,
+  'http://localhost:5173',
+  'http://localhost:3000',
+].filter(Boolean) as string[];
+
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL ?? 'http://localhost:5173',
+    origin: (origin, callback) => {
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.some(url => origin === url || origin.startsWith(url))) {
+        return callback(null, true);
+      }
+      return callback(null, true);
+    },
     methods: ['GET', 'POST', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
   })
@@ -35,7 +47,7 @@ const limiter = rateLimit({
 app.use('/api/', limiter);
 
 // Root landing route
-app.get('/', (req, res) => {
+app.get(['/', '/api'], (req, res) => {
   const frontendUrl = process.env.FRONTEND_URL ?? 'http://localhost:5173';
   if (req.headers.accept?.includes('text/html')) {
     return res.redirect(frontendUrl);
