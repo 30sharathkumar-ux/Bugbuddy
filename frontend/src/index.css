@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-page: #faf9f5;
+    --border-subtle: #e8e7e1;
+    --border-strong: #d8d6ce;
+  }
+
+  body {
+    background-color: var(--bg-page);
+    color: #1a1917;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, .font-editorial {
+    font-family: 'Newsreader', 'Instrument Serif', Georgia, serif;
+    letter-spacing: -0.02em;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', Consolas, monospace;
+  }
+
+  /* Custom scrollbars */
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #dcdad3; border-radius: 9999px; }
+  ::-webkit-scrollbar-thumb:hover { background: #b8b5ac; }
+}
+
+/* Diagonal hatch background pattern matching reference screenshot */
+.bg-hatch {
+  background-image: repeating-linear-gradient(
+    45deg,
+    #ebe9e1 0,
+    #ebe9e1 1px,
+    transparent 0,
+    transparent 8px
+  );
+}
+
+.bg-hatch-subtle {
+  background-image: repeating-linear-gradient(
+    45deg,
+    #f2f0e8 0,
+    #f2f0e8 1px,
+    transparent 0,
+    transparent 8px
+  );
+}
+
+/* Subtle dot grid pattern */
+.bg-dot-grid {
+  background-image: radial-gradient(#dcd8cf 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Warm ambient glow behind hero */
+.hero-glow {
+  background: radial-gradient(
+    ellipse 70% 50% at 50% 100%,
+    rgba(240, 226, 206, 0.5) 0%,
+    rgba(250, 249, 245, 0) 70%
+  );
+}
+
+/* Clean cards & buttons */
+.clean-card {
+  background: #ffffff;
+  border: 1px solid #e7e5dc;
+  border-radius: 1rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.02), 0 1px 2px -1px rgba(0, 0, 0, 0.02);
+}
+
+.clean-card-subtle {
+  background: #fbfbfa;
+  border: 1px solid #e8e7e1;
+  border-radius: 0.75rem;
+}
+
+/* Badges */
+.badge-root {
+  background-color: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.15rem 0.55rem;
+  border-radius: 9999px;
+}
+
+.badge-workaround {
+  background-color: #fefce8;
+  color: #854d0e;
+  border: 1px solid #fef08a;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.15rem 0.55rem;
+  border-radius: 9999px;
+}
+
+.badge-risky {
+  background-color: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.15rem 0.55rem;
+  border-radius: 9999px;
+}
+
+.badge-version {
+  background-color: #eff6ff;
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.15rem 0.55rem;
+  border-radius: 9999px;
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "ff149279-b890-4207-91a7-806ea29bbf56",
+  "status": "current",
+  "command": "deliver",
+  "type": "explainer",
+  "input": "C:\\Users\\30sha\\OneDrive\\Desktop\\hackwithbangalore2.0\\Paytmbuildathon\\.archify\\explainer-debugdesk-ai-20261121-132500\\candidate.archify.md",
+  "output": "C:\\Users\\30sha\\OneDrive\\Desktop\\hackwithbangalore2.0\\Paytmbuildathon\\bug-buddy-explainer.html",
+  "specification": {
+    "sha256": "04837ac265260916a1a861a5e98d6c2da2991fb3a478f8b0d0d3a22da68694bb",
+    "bytes": 4731
+  },
+  "artifact": {
+    "sha256": "bef050e7bbc9ad2204d576d8bfbd0a8906e50d94426d890e2b24654281381ee6",
+    "bytes": 970688
+  },
+  "explainer": {
+    "preparedSha256": "e0b706e18f27ae8723dc8052ab3425dbbe3bc899c78f588d144a5f34a01d8c64",
+    "dependencies": [
+      {
+        "kind": "diagram-spec",
+        "id": "debug-pipeline",
+        "inline": true,
+        "sha256": "bdf0ac98baf8f03fefdcaaf2688784b1f9872f0cf2fd6d796612c0bdac9f3146",
+        "bytes": 1281
+      },
+      {
+        "kind": "diagram-spec",
+        "id": "system-tree",
+        "inline": true,
+        "sha256": "89f9bb2a30c8d2e7a997af8397cc25cbfc044fdc1a6f94e5ce3a3dc1016dbbb2",
+        "bytes": 1083
+      }
+    ]
+  }
+}
